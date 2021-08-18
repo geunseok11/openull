@@ -114,35 +114,6 @@ const reducer = (state = initialState, action) => {
         // count: state.count - 1,
       };
 
-    // times calculate
-    case TIMES_PLUS_REQUEST:
-      return {
-        ...state,
-        times: state.times + 1,
-      };
-
-    // count calculate
-    case COUNT_DEFAULT_REQUEST:
-      return {
-        ...state,
-        count: 1,
-      };
-
-    case COUNT_PLUS_REQUEST:
-      return {
-        ...state,
-        count: state.count + 1,
-      };
-    case COUNT_MINUS_REQUEST:
-      if (state.count < 2) {
-        alert("수량은 1개 이상이어야 합니다");
-        state.count = 1;
-      }
-      return {
-        ...state,
-        count: state.count - 1,
-      };
-
     // home rendering
     case HOME_REQUEST:
       // console.log("In REDUX, HOME_REQUEST, executes")
