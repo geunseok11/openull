@@ -5,6 +5,7 @@ import GoodsList from "../pages/GoodsList";
 import GoodsInfo from "../pages/GoodsInfo";
 import Bucket from "../pages/Bucket";
 import Search from "../pages/Search";
+import Category from "../pages/Category";
 
 const Stack = createStackNavigator();
 
@@ -16,6 +17,7 @@ const HomeNavigator = () => {
       <Stack.Screen name="GoodsInfo" component={GoodsInfo} />
       <Stack.Screen name="Bucket" component={Bucket} />
       <Stack.Screen name="Search" component={Search} />
+      <Stack.Screen name="Category" component={Category} />
     </Stack.Navigator>
   );
 };
