@@ -16,12 +16,13 @@ import {
 import { all, fork, call, put, takeLatest, throttle } from "redux-saga/effects";
 
 function homeAPI() {
+  console.log("homeAPI");
   return axios.get("/products/all/1?order=date-desc");
 }
 
 function searchListAPI(data) {
   console.log("In SAGA, searchListAPI, data : ", data); // search
-  return axios.get(`/goods/list?keyword=${data}`);
+  return axios.get(`/products/all/1?order=date-desc`);
 }
 
 function goodsListAPI(data) {
