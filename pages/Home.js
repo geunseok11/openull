@@ -100,7 +100,7 @@ const Home = (props) => {
   const dispatch = useDispatch();
   const home = useSelector((state) => state.goods?.home);
   const products = useSelector((state) => state.goods.home?.products);
-  console.log("products :", products);
+  // console.log("products :", products);
 
   useEffect(() => {
     dispatch(homeToLoad());
@@ -116,34 +116,71 @@ const Home = (props) => {
         <SplitView>
           <InSplit>
             {products &&
-              products.reverse().map((el) => {
-                console.log("el :", el);
-                return (
-                  <ProductContainer
-                    key={shortId.generate()}
-                    onPress={() => {
-                      props.navigation.push("GoodsInfo", {
-                        prefix: el.prefix,
-                      });
-                    }}
-                  >
-                    <ProductContents key={shortId.generate()}>
-                      <ProductImageView
-                        source={{ uri: el.mainImage }}
-                      ></ProductImageView>
-                      <InTextView>
-                        <ProductTextView>{el.name}</ProductTextView>
-                        <OriginTextView>
-                          {el.originalPrice.toLocaleString()}원
-                        </OriginTextView>
-                        <ProductTextView>
-                          {el.ssomeePrice.toLocaleString()}원
-                        </ProductTextView>
-                      </InTextView>
-                    </ProductContents>
-                  </ProductContainer>
-                );
-              })}
+              products
+                // .slice(products.length / 2)
+                .reverse()
+                .map((el) => {
+                  // console.log("el :", el);
+                  return (
+                    <ProductContainer
+                      key={shortId.generate()}
+                      onPress={() => {
+                        props.navigation.push("GoodsInfo", {
+                          prefix: el.prefix,
+                        });
+                      }}
+                    >
+                      <ProductContents key={shortId.generate()}>
+                        <ProductImageView
+                          source={{ uri: el.mainImage }}
+                        ></ProductImageView>
+                        <InTextView>
+                          <ProductTextView>{el.name}</ProductTextView>
+                          <OriginTextView>
+                            {el.originalPrice.toLocaleString()}원
+                          </OriginTextView>
+                          <ProductTextView>
+                            {el.ssomeePrice.toLocaleString()}원
+                          </ProductTextView>
+                        </InTextView>
+                      </ProductContents>
+                    </ProductContainer>
+                  );
+                })}
+          </InSplit>
+          <InSplit>
+            {products &&
+              products
+                // .slice(0, products.length / 2)
+                .reverse()
+                .map((el) => {
+                  // console.log("el :", el);
+                  return (
+                    <ProductContainer
+                      key={shortId.generate()}
+                      onPress={() => {
+                        props.navigation.push("GoodsInfo", {
+                          prefix: el.prefix,
+                        });
+                      }}
+                    >
+                      <ProductContents key={shortId.generate()}>
+                        <ProductImageView
+                          source={{ uri: el.mainImage }}
+                        ></ProductImageView>
+                        <InTextView>
+                          <ProductTextView>{el.name}</ProductTextView>
+                          <OriginTextView>
+                            {el.originalPrice.toLocaleString()}원
+                          </OriginTextView>
+                          <ProductTextView>
+                            {el.ssomeePrice.toLocaleString()}원
+                          </ProductTextView>
+                        </InTextView>
+                      </ProductContents>
+                    </ProductContainer>
+                  );
+                })}
           </InSplit>
         </SplitView>
       </Contents>
