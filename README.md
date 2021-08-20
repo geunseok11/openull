@@ -2,12 +2,12 @@
 
 ## Stack
 
->> React-Native
->> React-Navigation
->> Redux
->> Redux-saga
->> axios
->> styled-components
+>> React-Native / 
+>> React-Navigation / 
+>> Redux / 
+>> Redux-saga / 
+>> axios / 
+>> styled-components / 
 
 ## 홈화면 상품 리스트
 
