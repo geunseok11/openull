@@ -69,7 +69,7 @@ const ButtonNavStyled = styled.Button`
 `;
 
 const GoodsInfoUpper = (props) => {
-  console.log("goodsInfoUpper :", props);
+  // console.log("goodsInfoUpper :", props);
   return (
     <DetailInfoOfUpper>
       <LeftDetailInfoOfUpper>
@@ -101,7 +101,7 @@ const GoodsInfoUpper = (props) => {
               <ButtonNavStyled
                 title={"담기"}
                 color="#464e46"
-                onPress={props.onPress2}
+                onPress={props.onPress}
               />
             </ViewNavRowStyled>
           </View>
