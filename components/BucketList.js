@@ -45,7 +45,7 @@ const BucketList = ({ props }) => {
     <Container>
       <TouchableOpacity
         onPress={() => {
-          return props.props.navigation.push("GoodsInfo", { id: id });
+          return props.props.navigation.push("GoodsInfo", { prefix: prefix });
         }}
       >
         <ViewStyled>
