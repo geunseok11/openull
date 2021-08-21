@@ -69,8 +69,15 @@ const Bucket = (props) => {
 
       <BottomView>
         <BottomAggregate>
-          <BottomAggregateText>합계 수량 : {quantity}</BottomAggregateText>
-          <Text>합계 금액 : {price.toLocaleString()}</Text>
+          <BottomAggregateText>
+            합계 수량 : {bucket.reduce((acc, cur) => acc.count + cur.count)}
+          </BottomAggregateText>
+          <Text>
+            합계 금액 :{" "}
+            {bucket
+              .reduce((acc, cur) => acc.ssomeePrice + cur.ssomeePrice)
+              .toLocaleString()}
+          </Text>
         </BottomAggregate>
 
         <BottomPayment>
