@@ -21,12 +21,12 @@ function homeAPI() {
 }
 
 function searchListAPI(data) {
-  console.log("In SAGA, searchListAPI, data : ", data); // search
+  console.log("In SAGA, searchListAPI, data : ", data);
   return axios.get(`/products/all/1?order=date-desc`);
 }
 
 function goodsListAPI(data) {
-  console.log("In SAGA, goodsListAPI, data : ", data); //recommendation
+  console.log("In SAGA, goodsListAPI, data : ", data);
   return axios
     .get(`/products/${data.category.id}/${iterator}?order=price-asc`)
     .then((res) => {
@@ -55,7 +55,6 @@ function* home() {
   }
 }
 
-// searchList
 function* searchList(action) {
   console.log("In SAGA, searchList, action : ", action);
   try {
@@ -93,11 +92,7 @@ function* goodsList(action) {
   }
 }
 
-// goodsInfo
 function* goodsInfo(action) {
-  // console.log("In SAGA, goodsInfo, executes, action : ", String(action.id))
-  // console.log("In SAGA, goodsInfo, executes, action : ", action)
-  // let data = action.id
   try {
     const result = yield call(goodsInfoAPI, action.id);
     yield put({
