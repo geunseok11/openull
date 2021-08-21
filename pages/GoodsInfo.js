@@ -53,8 +53,6 @@ const GoodsInfo = (props) => {
   };
 
   useEffect(() => {
-    // TODO: In here, qna states are re-rendering? Or, In render part, qna states are re-rendering? TEST!
-
     dispatch(loadGoodsInfo(prefix));
   }, []);
 
@@ -73,7 +71,7 @@ const GoodsInfo = (props) => {
           detailImages={detailImages}
           shop={shop}
           orderLimit={orderLimit}
-          onPress2={() => {
+          onPress={() => {
             props.navigation.push("Bucket");
           }}
         />
