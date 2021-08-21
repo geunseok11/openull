@@ -46,7 +46,6 @@ const Header = ({ props }) => {
           props.navigation.push("Home");
         }}
       >
-        {/* <FontAwesomeIcon icon={faHome} color={'#464e46'} size={25} /> */}
         <HeaderIconText>HOME</HeaderIconText>
       </HeaderIcon>
 
@@ -57,7 +56,6 @@ const Header = ({ props }) => {
           props.navigation.push("Bucket");
         }}
       >
-        {/* <FontAwesomeIcon icon={faSignInAlt} color={'#464e46'} size={25} /> */}
         <HeaderIconText>BUCKET</HeaderIconText>
       </HeaderIcon>
     </HeaderView>

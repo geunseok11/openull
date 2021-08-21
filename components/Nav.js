@@ -55,7 +55,6 @@ const Nav = ({ props }) => {
           props.navigation.goBack();
         }}
       >
-        {/* <FontAwesomeIcon icon={faChevronLeft} color={'#464e46'} size={25} /> */}
         <NavText>BACK</NavText>
       </NavIcon>
 
@@ -66,7 +65,6 @@ const Nav = ({ props }) => {
               props.navigation.push("Search");
             }}
           >
-            {/* <FontAwesomeIcon icon={faSearch} color={'#464e46'} size={25} /> */}
             <HeaderIconText>SEARCH</HeaderIconText>
           </HeaderIcon>
         </NavCenterText>
@@ -76,7 +74,6 @@ const Nav = ({ props }) => {
           props.navigation.push("Category");
         }}
       >
-        {/* <FontAwesomeIcon icon={faAddressCard} color={"#464e46"} size={30} /> */}
         <NavText>CATEGORY</NavText>
       </NavIcon>
     </NavView>
