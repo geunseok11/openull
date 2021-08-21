@@ -59,9 +59,6 @@ const Search = (props) => {
   const searchList = useSelector((state) => state.goods?.home);
   console.log("In Search, searchList, : ", searchList);
 
-  // const errorMessage = useSelector((state) => state.goods?.loadSearchListError);
-  // console.log("In Search, errorMessage : ", errorMessage);
-
   useEffect(() => {
     if (searchList && searchList.length > 0) {
       searchList = [];
